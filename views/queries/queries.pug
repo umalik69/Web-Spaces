@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+    table.table
+        thead
+            tr
+                th First Name
+                th Last Name
+                th Email
+                th Phone No
+                th Message
+        tbody
+            each lead in leads
+                tr
+                    td=lead.fname
+                    td=lead.lname
+                    td=lead.email
+                    td=lead.phNo
+                    td=lead.msg

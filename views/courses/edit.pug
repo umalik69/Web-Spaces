@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+    h1 Edit course
+    form(action="/courses/edit/"+courses._id,method="post")
+        .form-group
+            label(for="name") Course Name
+            input#name(type="text", class="form-control", name="name")
+        .form-group
+            label(for="dur") Course dur
+            input#price(type="text", class="form-control", name="dur")
+
+        input(type="submit", class="btn btn-info")
+    
