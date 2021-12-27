@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+    table.table
+        thead
+            tr
+                th First Name
+                th Last Name
+                th Email
+                th Phone No
+                th pass
+        tbody
+            each regis in registrations
+                tr
+                    td=regis.fname
+                    td=regis.lname
+                    td=regis.email
+                    td=regis.phNo
+                    td=regis.password
