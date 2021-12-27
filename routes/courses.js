@@ -4,12 +4,17 @@ var Course=require("../models/courses")
 var checkSessionAuth= require("../middlewares/checkSessionAuth")
 
 /* GET home page. */
-router.get('/',checkSessionAuth,async function(req, res, next) {
+router.get('/json',async function(req, res, next) {
+  let courses= await Course.find();
+res.send(courses)
+});
+router.get('/',async function(req, res, next) {
     let courses= await Course.find();
     console.log(courses);
+   
   res.render('courses/courses',{title: "Courses", courses:courses});
 });
-router.get('/add',checkSessionAuth,async function(req, res, next) {
+router.get('/add',async function(req, res, next) {
   
 res.render('courses/addC');
 });

@@ -22,9 +22,9 @@ function App() {
     <Router>
     <div className="App">
       <Routes>
-      <Route path="/Courses/WebDevelopment" exact element={<CWD/>} />
-      <Route path="/Courses/seo" exact element={<CSEO/>} />
-      <Route path="/Courses/DigitalMaketing" exact element={<CDM/>} />   
+      <Route path="/Courses/WebDevelopment" exact element={<Courses/>} />
+      <Route path="/Courses/seo" exact element={<Courses/>} />
+      <Route path="/Courses/DigitalMaketing" exact element={<Courses/>} />   
       <Route path="/Services/WebDevelopment" exact element={<Services/>} />
       <Route path="/Services/seo" exact element={<Services/>} />
       <Route path="Services/DM" exact element={<Services/>}/>

@@ -1,6 +1,7 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+var cors=require('cors');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose=require("mongoose");
@@ -15,6 +16,7 @@ var sessionAuth= require("./middlewares/sesionAuth")
 var checkSessionAuth= require("./middlewares/checkSessionAuth")
 
 var app = express();
+app.use(cors());
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
