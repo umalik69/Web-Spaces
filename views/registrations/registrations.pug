@@ -8,12 +8,12 @@ block content
                 th Last Name
                 th Email
                 th Phone No
-                th pass
+                th Password 
         tbody
-            each regis in registrations
+            each registration in registrations
                 tr
-                    td=regis.fname
-                    td=regis.lname
-                    td=regis.email
-                    td=regis.phNo
-                    td=regis.password
+                    td=registration.fname
+                    td=registration.lname
+                    td=registration.email
+                    td=registration.phNo
+                    td=registration.password
